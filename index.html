@@ -7,66 +7,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/sait1.css">
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
         h1 {
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
-            padding-left: 10px;
-            font-size: 56px;
+            font-size: 28px;
+            text-align: center;
         }
 
         p {
             font-family: 'Lora', serif;
-            font-weight: 800;
-            padding-left: 10px;
-            font-size: 26px;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            max-width: 90%;
         }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 32px; /* Улучшенное уменьшение заголовка */
-                text-align: center;
-            }
+        .category-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
 
-            p {
-                font-size: 18px;
-                text-align: center;
-            }
+        .category-button {
+            width: 90%;
+            max-width: 300px;
+            padding: 10px;
+            font-size: 14px;
+            margin: 5px 0;
+        }
 
-            .category-button {
-                padding: 12px;
-                font-size: 16px;
-                width: 90%; /* Делаем кнопки шире для удобства */
-            }
+        .sidebar-tabs {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
 
-            .sidebar-tabs {
-                width: 100%;
-                height: auto;
-                flex-direction: row;
-                overflow-x: auto;
-            }
+        .tab-button {
+            font-size: 14px;
+            padding: 8px;
+        }
 
-            .tab-button {
-                margin-bottom: 0;
-                margin-right: 5px;
-                white-space: nowrap;
-                font-size: 14px;
-            }
+        .tab-content {
+            width: 100%;
+            max-width: 800px;
+            padding: 10px;
+        }
 
-            .tab-content {
-                margin-top: 10px;
-                padding: 10px;
-            }
+        .square {
+            width: 90%;
+            max-width: 400px;
+            font-size: 18px;
+            padding: 10px;
+            text-align: center;
+        }
 
-            .square {
-                width: 100%;
-                height: auto;
-                font-size: 20px;
-                padding: 10px;
-            }
-
-            .parallax {
-                height: 25vh;
-            }
+        .parallax {
+            height: 20vh;
         }
     </style>
 </head>
@@ -80,7 +90,7 @@
         </div>
     </div>
 
-    <div id="main-page" class="main-page" style="display: none; flex-direction: column; align-items: center;">
+    <div id="main-page" class="main-page" style="display: none;">
         <div class="sidebar-tabs">
             <button class="tab-button active" data-tab="tab1">Ознайомство</button>
             <button class="tab-button" data-tab="tab2">Розклад</button>
