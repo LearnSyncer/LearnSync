@@ -177,3 +177,36 @@ p {
     background: linear-gradient(135deg, #388E3C, #2E7D32);
     transform: scale(1.05);
 }
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .sidebar-tabs {
+        width: 100%; /* Боковая панель занимает всю ширину */
+        height: auto; /* Высота автоматическая */
+        flex-direction: row; /* Кнопки вкладок в ряд */
+        overflow-x: auto; /* Горизонтальная прокрутка */
+    }
+
+    .tab-button {
+        margin-bottom: 0; /* Убираем отступы между кнопками */
+        margin-right: 5px; /* Добавляем отступы между кнопками */
+        white-space: nowrap; /* Текст не переносится */
+    }
+
+    .tab-content {
+        margin-top: 10px; /* Добавляем отступ сверху */
+    }
+
+    .square {
+        width: 100%; /* Квадрат занимает всю ширину */
+        height: auto; /* Высота автоматическая */
+        font-size: 24px; /* Уменьшаем размер текста */
+    }
+
+    .parallax {
+        height: 30vh; /* Уменьшаем высоту параллакса */
+    }
+}
+    background: linear-gradient(135deg, #388E3C, #2E7D32);
+    transform: scale(1.05);
+}
