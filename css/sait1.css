@@ -6,7 +6,6 @@ body {
     background: linear-gradient(270deg, #1E3A8A, #6D28D9, #0EA5E9, #1E3A8A, #6D28D9);
     background-size: 500% 500%;
     animation: GradientBackground 10s linear infinite;
-    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
 /* Анімація для градієнтного фону */
@@ -31,7 +30,7 @@ body {
 /* Бічна панель з вкладками */
 .sidebar-tabs {
     width: 150px;
-    height: 100vh; /* Занимает всю высоту экрана */
+    height: 1200px;
     background-color: rgba(241, 241, 241, 0.9);
     padding: 10px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -70,7 +69,6 @@ body {
     flex: 1;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Добавляем вертикальную прокрутку при необходимости */
 }
 
 /* Контент вкладок */
@@ -95,9 +93,8 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
-    margin-top: 80px;
+	margin-top: 80px;
 }
-
 .tab-content {
     background-image: url('../images/your-image.jpg');
     background-attachment: fixed;
@@ -107,7 +104,7 @@ p {
 }
 
 .square {
-    width: 100%; /* Квадрат занимает всю ширину */
+    width: 1670px;
     height: 60px;
     background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
     padding: 10px;
@@ -136,7 +133,7 @@ p {
 }
 
 .text {
-    padding-left: 30px;
+	padding-left: 30px;
 }
 
 /* Стили для страницы выбора категории */
@@ -179,52 +176,4 @@ p {
 .category-button:hover {
     background: linear-gradient(135deg, #388E3C, #2E7D32);
     transform: scale(1.05);
-}
-
-/* Медиа-запросы для мобильных устройств */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column; /* Меняем направление flex на вертикальное */
-    }
-
-    .sidebar-tabs {
-        width: 100%; /* Боковая панель занимает всю ширину */
-        height: auto; /* Высота автоматическая */
-        flex-direction: row; /* Кнопки вкладок в ряд */
-        overflow-x: auto; /* Горизонтальная прокрутка */
-        padding: 5px; /* Уменьшаем отступы */
-    }
-
-    .tab-button {
-        margin-bottom: 0; /* Убираем отступы между кнопками */
-        margin-right: 5px; /* Добавляем отступы между кнопками */
-        white-space: nowrap; /* Текст не переносится */
-        padding: 10px; /* Уменьшаем отступы внутри кнопок */
-        font-size: 14px; /* Уменьшаем размер текста */
-    }
-
-    .tab-content {
-        margin-top: 10px; /* Добавляем отступ сверху */
-        padding: 10px; /* Уменьшаем отступы внутри контента */
-    }
-
-    .square {
-        width: 100%; /* Квадрат занимает всю ширину */
-        height: auto; /* Высота автоматическая */
-        font-size: 24px; /* Уменьшаем размер текста */
-        padding: 10px; /* Уменьшаем отступы */
-    }
-
-    .parallax {
-        height: 30vh; /* Уменьшаем высоту параллакса */
-    }
-
-    .category-box h1 {
-        font-size: 24px; /* Уменьшаем размер заголовка */
-    }
-
-    .category-button {
-        padding: 10px; /* Уменьшаем отступы кнопок */
-        font-size: 16px; /* Уменьшаем размер текста кнопок */
-    }
 }
