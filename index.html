@@ -23,49 +23,54 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 36px; /* Уменьшаем размер заголовка на мобильных устройствах */
+                font-size: 32px; /* Улучшенное уменьшение заголовка */
+                text-align: center;
             }
 
             p {
-                font-size: 18px; /* Уменьшаем размер текста на мобильных устройствах */
+                font-size: 18px;
+                text-align: center;
             }
 
             .category-button {
-                padding: 10px; /* Уменьшаем отступы кнопок на мобильных */
-                font-size: 16px; /* Уменьшаем размер текста кнопок */
+                padding: 12px;
+                font-size: 16px;
+                width: 90%; /* Делаем кнопки шире для удобства */
             }
 
             .sidebar-tabs {
-                width: 100%; /* Боковая панель занимает всю ширину на мобильных */
-                height: auto; /* Высота автоматическая */
-                flex-direction: row; /* Кнопки вкладок в ряд */
-                overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+                width: 100%;
+                height: auto;
+                flex-direction: row;
+                overflow-x: auto;
             }
 
             .tab-button {
-                margin-bottom: 0; /* Убираем отступы между кнопками */
-                margin-right: 5px; /* Добавляем отступы между кнопками */
-                white-space: nowrap; /* Текст не переносится */
+                margin-bottom: 0;
+                margin-right: 5px;
+                white-space: nowrap;
+                font-size: 14px;
             }
 
             .tab-content {
-                margin-top: 10px; /* Добавляем отступ сверху */
+                margin-top: 10px;
+                padding: 10px;
             }
 
             .square {
-                width: 100%; /* Квадрат занимает всю ширину */
-                height: auto; /* Высота автоматическая */
-                font-size: 24px; /* Уменьшаем размер текста */
+                width: 100%;
+                height: auto;
+                font-size: 20px;
+                padding: 10px;
             }
 
             .parallax {
-                height: 30vh; /* Уменьшаем высоту параллакса */
+                height: 25vh;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Страница выбора категории -->
     <div id="category-page" class="category-page">
         <div class="category-box">
             <h1>Виберіть категорію</h1>
@@ -75,8 +80,7 @@
         </div>
     </div>
 
-    <!-- Основная страница с вкладками (изначально скрыта) -->
-    <div id="main-page" class="main-page" style="display: none;">
+    <div id="main-page" class="main-page" style="display: none; flex-direction: column; align-items: center;">
         <div class="sidebar-tabs">
             <button class="tab-button active" data-tab="tab1">Ознайомство</button>
             <button class="tab-button" data-tab="tab2">Розклад</button>
@@ -94,12 +98,7 @@
             </div>        
             <div class="text">
                 <h1>LearnSync</h1>
-                <p>Інноваційна платформа, 
-                яка забезпечує ефективне управління навчальним процесом та комунікацію між учнями, 
-                вчителями та батьками. 
-                Вона пропонує зручний доступ до навчальних матеріалів, 
-                розкладу, оцінок та інших важливих ресурсів
-                </p>
+                <p>Інноваційна платформа для ефективного управління навчальним процесом.</p>
             </div>
             <div id="tab2" class="tab-pane">
                 <h1>Контент Вкладки 2</h1>
