@@ -50,3 +50,15 @@ parentBtn.addEventListener('click', () => {
     mainPage.style.display = 'flex';
     categoryValueElement.textContent = "Батьки (3)"; // Оновлюємо текст
 });
+
+// Добавляем обработку касаний для мобильных устройств
+tabButtons.forEach(button => {
+    button.addEventListener('touchstart', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabPanes.forEach(pane => pane.classList.remove('active'));
+
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
