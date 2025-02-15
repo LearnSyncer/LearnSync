@@ -177,3 +177,59 @@ p {
     background: linear-gradient(135deg, #388E3C, #2E7D32);
     transform: scale(1.05);
 }
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Меняем направление flex на вертикальное */
+    }
+
+    .sidebar-tabs {
+        width: 100%; /* Боковая панель занимает всю ширину */
+        height: auto; /* Высота автоматическая */
+        padding: 5px; /* Уменьшаем отступы */
+        box-shadow: none; /* Убираем тень */
+    }
+
+    .tab-button {
+        padding: 10px; /* Уменьшаем отступы для кнопок */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
+    .tab-content {
+        padding: 10px; /* Уменьшаем отступы для контента */
+    }
+
+    .square {
+        width: 100%; /* Квадрат занимает всю ширину */
+        height: auto; /* Высота автоматическая */
+        font-size: 24px; /* Уменьшаем размер шрифта */
+        padding: 5px; /* Уменьшаем отступы */
+    }
+
+    .text {
+        padding-left: 10px; /* Уменьшаем отступы для текста */
+    }
+
+    .category-box h1 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    .category-button {
+        padding: 10px; /* Уменьшаем отступы для кнопок */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+
+    .parallax {
+        height: 30vh; /* Уменьшаем высоту параллакса */
+        margin-top: 40px; /* Уменьшаем отступ сверху */
+    }
+
+    .main-page {
+        flex-direction: column; /* Меняем направление flex на вертикальное */
+    }
+
+    .tab-content {
+        flex: none; /* Убираем flex для контента */
+    }
+}
