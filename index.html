@@ -20,6 +20,61 @@
             padding-left: 10px;
             font-size: 26px;
         }
+
+        /* Мобильные стили */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px; /* Уменьшаем размер заголовка для мобильных */
+            }
+
+            p {
+                font-size: 18px; /* Уменьшаем размер текста для мобильных */
+            }
+
+            .category-box h1 {
+                font-size: 24px; /* Уменьшаем размер заголовка на странице выбора категории */
+            }
+
+            .category-button {
+                padding: 10px; /* Уменьшаем отступы для кнопок */
+                font-size: 16px; /* Уменьшаем размер шрифта для кнопок */
+            }
+
+            .sidebar-tabs {
+                width: 100%; /* Боковая панель занимает всю ширину */
+                height: auto; /* Высота автоматическая */
+                padding: 5px; /* Уменьшаем отступы */
+            }
+
+            .tab-button {
+                padding: 10px; /* Уменьшаем отступы для кнопок вкладок */
+                font-size: 14px; /* Уменьшаем размер шрифта */
+            }
+
+            .square {
+                width: 100%; /* Квадрат занимает всю ширину */
+                height: auto; /* Высота автоматическая */
+                font-size: 24px; /* Уменьшаем размер шрифта */
+                padding: 5px; /* Уменьшаем отступы */
+            }
+
+            .text {
+                padding-left: 10px; /* Уменьшаем отступы для текста */
+            }
+
+            .parallax {
+                height: 30vh; /* Уменьшаем высоту параллакса */
+                margin-top: 40px; /* Уменьшаем отступ сверху */
+            }
+
+            .main-page {
+                flex-direction: column; /* Меняем направление flex на вертикальное */
+            }
+
+            .tab-content {
+                flex: none; /* Убираем flex для контента */
+            }
+        }
     </style>
 </head>
 <body>
@@ -35,22 +90,22 @@
 
     <!-- Основная страница с вкладками (изначально скрыта) -->
     <div id="main-page" class="main-page" style="display: none;">
-        <div class="sidebar-tabs">
+        <div class="sidebar-tabs mobile-tabs">
             <button class="tab-button active" data-tab="tab1">Ознайомство</button>
             <button class="tab-button" data-tab="tab2">Розклад</button>
             <button class="tab-button" data-tab="tab3">Список подій</button>
             <button class="tab-button" data-tab="tab4">Тест</button>
         </div>
         
-        <div class="tab-content">
-            <div class="square">
+        <div class="tab-content mobile-content">
+            <div class="square mobile-square">
                 <h1>LearnSync</h1>
             </div>
-			
+            
             <div id="tab1" class="tab-pane active">
-                <div class="parallax"></div>
+                <div class="parallax mobile-parallax"></div>
             </div>		
-            <div class="text">
+            <div class="text mobile-text">
                 <h1>LearnSync</h1>
                 <p>Інноваційна платформа, 
                 яка забезпечує ефективне управління навчальним процесом та комунікацію між учнями, 
