@@ -7,81 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/sait1.css">
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-            font-size: 16px;
-        }
-
         h1 {
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
-            font-size: 24px;
-            text-align: center;
+            padding-left: 10px;
+            font-size: 56px;
         }
 
         p {
             font-family: 'Lora', serif;
-            font-weight: 400;
-            font-size: 14px;
-            text-align: center;
-            max-width: 90%;
-        }
-
-        .category-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 350px;
-            padding: 10px;
-        }
-
-        .category-button {
-            width: 100%;
-            padding: 8px;
-            font-size: 14px;
-            margin: 5px 0;
-        }
-
-        .sidebar-tabs {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            overflow-x: auto;
-            white-space: nowrap;
-            padding: 5px;
-        }
-
-        .tab-button {
-            font-size: 12px;
-            padding: 6px;
-        }
-
-        .tab-content {
-            width: 100%;
-            max-width: 700px;
-            padding: 8px;
-        }
-
-        .square {
-            width: 90%;
-            max-width: 350px;
-            font-size: 16px;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .parallax {
-            height: 18vh;
+            font-weight: 800;
+            padding-left: 10px;
+            font-size: 26px;
         }
     </style>
 </head>
 <body>
+    <!-- Страница выбора категории -->
     <div id="category-page" class="category-page">
         <div class="category-box">
             <h1>Виберіть категорію</h1>
@@ -91,6 +33,7 @@
         </div>
     </div>
 
+    <!-- Основная страница с вкладками (изначально скрыта) -->
     <div id="main-page" class="main-page" style="display: none;">
         <div class="sidebar-tabs">
             <button class="tab-button active" data-tab="tab1">Ознайомство</button>
@@ -103,13 +46,18 @@
             <div class="square">
                 <h1>LearnSync</h1>
             </div>
-            
+			
             <div id="tab1" class="tab-pane active">
                 <div class="parallax"></div>
-            </div>        
+            </div>		
             <div class="text">
                 <h1>LearnSync</h1>
-                <p>Інноваційна платформа для ефективного управління навчальним процесом.</p>
+                <p>Інноваційна платформа, 
+                яка забезпечує ефективне управління навчальним процесом та комунікацію між учнями, 
+                вчителями та батьками. 
+                Вона пропонує зручний доступ до навчальних матеріалів, 
+                розкладу, оцінок та інших важливих ресурсів
+                </p>
             </div>
             <div id="tab2" class="tab-pane">
                 <h1>Контент Вкладки 2</h1>
