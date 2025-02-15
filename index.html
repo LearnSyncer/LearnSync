@@ -20,6 +20,48 @@
             padding-left: 10px;
             font-size: 26px;
         }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px; /* Уменьшаем размер заголовка на мобильных устройствах */
+            }
+
+            p {
+                font-size: 18px; /* Уменьшаем размер текста на мобильных устройствах */
+            }
+
+            .category-button {
+                padding: 10px; /* Уменьшаем отступы кнопок на мобильных */
+                font-size: 16px; /* Уменьшаем размер текста кнопок */
+            }
+
+            .sidebar-tabs {
+                width: 100%; /* Боковая панель занимает всю ширину на мобильных */
+                height: auto; /* Высота автоматическая */
+                flex-direction: row; /* Кнопки вкладок в ряд */
+                overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+            }
+
+            .tab-button {
+                margin-bottom: 0; /* Убираем отступы между кнопками */
+                margin-right: 5px; /* Добавляем отступы между кнопками */
+                white-space: nowrap; /* Текст не переносится */
+            }
+
+            .tab-content {
+                margin-top: 10px; /* Добавляем отступ сверху */
+            }
+
+            .square {
+                width: 100%; /* Квадрат занимает всю ширину */
+                height: auto; /* Высота автоматическая */
+                font-size: 24px; /* Уменьшаем размер текста */
+            }
+
+            .parallax {
+                height: 30vh; /* Уменьшаем высоту параллакса */
+            }
+        }
     </style>
 </head>
 <body>
@@ -46,10 +88,10 @@
             <div class="square">
                 <h1>LearnSync</h1>
             </div>
-			
+            
             <div id="tab1" class="tab-pane active">
                 <div class="parallax"></div>
-            </div>		
+            </div>        
             <div class="text">
                 <h1>LearnSync</h1>
                 <p>Інноваційна платформа, 
