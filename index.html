@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnSync</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sait1.css">
+    <style>
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            padding-left: 10px;
+            font-size: 56px;
+        }
+
+        p {
+            font-family: 'Lora', serif;
+            font-weight: 800;
+            padding-left: 10px;
+            font-size: 26px;
+        }
+
+        /* Мобильные стили */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px; /* Уменьшаем размер заголовка для мобильных */
+                padding-left: 10px; /* Возвращаем отступ слева */
+            }
+
+            p {
+                font-size: 18px; /* Уменьшаем размер текста для мобильных */
+                padding-left: 10px; /* Возвращаем отступ слева */
+            }
+
+            .category-box h1 {
+                font-size: 24px; /* Уменьшаем размер заголовка на странице выбора категории */
+                padding-left: 10px; /* Возвращаем отступ слева */
+            }
+
+            .category-button {
+                padding: 10px; /* Уменьшаем отступы для кнопок */
+                font-size: 16px; /* Уменьшаем размер шрифта для кнопок */
+                width: 80%; /* Кнопки занимают 80% ширины экрана */
+                margin: 10px auto; /* Центрируем кнопки */
+                border-radius: 8px; /* Возвращаем скругление углов */
+            }
+
+            .sidebar-tabs {
+                width: 100%; /* Боковая панель занимает всю ширину */
+                height: auto; /* Высота автоматическая */
+                padding: 10px; /* Возвращаем отступы */
+                overflow: hidden; /* Убираем возможность скролла */
+            }
+
+            .tab-button {
+                padding: 10px; /* Уменьшаем отступы для кнопок вкладок */
+                font-size: 14px; /* Уменьшаем размер шрифта */
+                width: 80%; /* Кнопки занимают 80% ширины экрана */
+                margin: 5px auto; /* Центрируем кнопки */
+                border-radius: 8px; /* Возвращаем скругление углов */
+            }
+
+            .square {
+                width: 100%; /* Квадрат занимает всю ширину */
+                height: auto; /* Высота автоматическая */
+                font-size: 24px; /* Уменьшаем размер шрифта */
+                padding: 10px; /* Возвращаем отступы */
+                margin: 0; /* Убираем отступы */
+            }
+
+            .text {
+                padding-left: 10px; /* Возвращаем отступы для текста */
+                margin: 0; /* Убираем отступы */
+            }
+
+            .parallax {
+                height: 30vh; /* Уменьшаем высоту параллакса */
+                margin-top: 40px; /* Возвращаем отступ сверху */
+            }
+
+            .main-page {
+                flex-direction: column; /* Меняем направление flex на вертикальное */
+                overflow: hidden; /* Убираем возможность скролла */
+                padding: 10px; /* Возвращаем отступы */
+                margin: 0; /* Убираем отступы */
+            }
+
+            .tab-content {
+                flex: none; /* Убираем flex для контента */
+                width: 100%; /* Ограничиваем ширину контента */
+                overflow: hidden; /* Убираем возможность скролла */
+                padding: 10px; /* Возвращаем отступы */
+                margin: 0; /* Убираем отступы */
+            }
+
+            .category-page {
+                overflow: hidden; /* Убираем возможность скролла */
+                padding: 10px; /* Возвращаем отступы */
+                margin: 0; /* Убираем отступы */
+            }
+
+            .category-box {
+                padding: 10px; /* Возвращаем отступы */
+                margin: 0 auto; /* Центрируем контейнер */
+                width: 90%; /* Занимает 90% ширины экрана */
+                text-align: center; /* Центрируем текст */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Страница выбора категории -->
+    <div id="category-page" class="category-page">
+        <div class="category-box">
+            <h1>Виберіть категорію</h1>
+            <button id="teacher-btn" class="category-button">Вчитель</button>
+            <button id="student-btn" class="category-button">Учень</button>
+            <button id="parent-btn" class="category-button">Батьки</button>
+        </div>
+    </div>
+
+    <!-- Основная страница с вкладками (изначально скрыта) -->
+    <div id="main-page" class="main-page" style="display: none;">
+        <div class="sidebar-tabs mobile-tabs">
+            <button class="tab-button active" data-tab="tab1">Ознайомство</button>
+            <button class="tab-button" data-tab="tab2">Розклад</button>
+            <button class="tab-button" data-tab="tab3">Список подій</button>
+            <button class="tab-button" data-tab="tab4">Тест</button>
+        </div>
+        
+        <div class="tab-content mobile-content">
+            <div class="square mobile-square">
+                <h1>LearnSync</h1>
+            </div>
+            
+            <div id="tab1" class="tab-pane active">
+                <div class="parallax mobile-parallax"></div>
+            </div>		
+            <div class="text mobile-text">
+                <h1>LearnSync</h1>
+                <p>Інноваційна платформа, 
+                яка забезпечує ефективне управління навчальним процесом та комунікацію між учнями, 
+                вчителями та батьками. 
+                Вона пропонує зручний доступ до навчальних матеріалів, 
+                розкладу, оцінок та інших важливих ресурсів
+                </p>
+            </div>
+            <div id="tab2" class="tab-pane">
+                <h1>Контент Вкладки 2</h1>
+                <p>2</p>
+            </div>
+            <div id="tab3" class="tab-pane">
+                <h1>Контент Вкладки 3</h1>
+                <p>3</p>
+            </div>
+            <div id="tab4" class="tab-pane">
+                <h1>Контент Вкладки 4</h1>
+                <p>4</p>
+            </div>        
+        </div>
+    </div>
+
+    <script src="js/sait1.js"></script>
+</body>
+</html>
